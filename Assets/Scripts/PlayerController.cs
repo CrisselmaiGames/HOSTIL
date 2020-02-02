@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         switch (_gameState)
         {
-            case GameState.PreGame:
+            case GameState.Menu:
                 break;
             case GameState.Playing:
                 inReactor = false;

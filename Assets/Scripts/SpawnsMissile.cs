@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpawnsMissile : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     public MissileController missilePrefab;
     public List<Transform> spawnPoints;
 
@@ -13,7 +11,9 @@ public class SpawnsMissile : MonoBehaviour
     public GameObject reactor2;
     public GameObject reactor3;
 
->>>>>>> parent of a18c9c3... Agrego el tema principal
+    private bool isMusicPlaying = false;
+    public AudioSource mainMusic;
+
     public Coroutine rutineSpawn;
 
     private void Start()
@@ -42,12 +42,15 @@ public class SpawnsMissile : MonoBehaviour
         {
             case GameState.Playing:
                 SpawnMissile();
+                PlayMusic();
                 break;
             case GameState.EndGame:
                 StopSpawnRutine();
+                StopMusic();
                 break;
             case GameState.Pause:
                 StopSpawnRutine();
+                PauseMusic();
                 break;
             case GameState.MiniGame:
                 StopSpawnRutine();
@@ -84,7 +87,7 @@ public class SpawnsMissile : MonoBehaviour
             return null;
         }        
     }
-<<<<<<< HEAD
+
     public void PlayMusic(){
         if (isMusicPlaying){
             return;
@@ -106,6 +109,3 @@ public class SpawnsMissile : MonoBehaviour
         isMusicPlaying = false;
     }
 }
-=======
-}
->>>>>>> parent of a18c9c3... Agrego el tema principal

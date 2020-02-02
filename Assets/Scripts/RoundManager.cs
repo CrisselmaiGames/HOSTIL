@@ -5,7 +5,7 @@ using System;
 
 public enum GameState
 {
-    PreGame,
+    Menu,
     Playing,
     EndGame,
     Pause,
